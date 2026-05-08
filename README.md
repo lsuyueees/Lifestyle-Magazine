@@ -13,3 +13,7 @@ Wellness - Health and lifestyle advice (e.g., yoga for seniors, morning exercise
 Entertainment - Celebrity news and pop culture (e.g., royal family updates, trending shows like Physical: 100)
 
 Women - Health, wellness, and empowerment content for women (e.g., autism diagnosis in women, HPV vaccination initiatives)
+
+
+## Run site
+https://lsuyueees.github.io/SLIFETIMESY-Lifestyle-Magazine/index
