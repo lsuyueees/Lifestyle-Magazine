@@ -1,0 +1,364 @@
+body {
+  background-color: #EAEAEA;
+}
+
+header {
+  font-weight: bold;
+  position: relative;
+}
+
+/* Scroll to top button */
+#scrollToTheTop {
+  display: unset;
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  z-index: 99;
+  font-size: 12px;
+  border:none;
+  outline:none;
+  background-color: #4d5d53;
+  color:#ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollToTheTop:hover {
+  color:#000000;
+}
+
+/* Main font of the whole website */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* Name of my magazine */
+.maintitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d5d53;
+  height: fit-content;
+}
+
+.maintitle a:link {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:visited {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:hover {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+/* Real-time date */
+#todaysdate {
+  color: #4d5d53;
+  font-family: 'DM Serif Display', serif;
+  font-size: small;
+  text-align: right;
+  height: fit-content;
+}
+
+/* @media allows application of different styles for different media types/devices */
+/* When screen size width becomes smaller than 300px, the style below will be applied */
+/* Same goes for the rest of the @media in the css, with respective to their screen size stated */
+@media screen and (max-width: 300px) {
+  .maintitle {
+    display: flex;
+    font-size: 20px;
+  }
+}
+
+/* Navigation bar */
+.nav {
+  position: relative;
+  background-color: #EAEAEA;
+  display: flex;
+}
+
+.nav ul {
+  margin: 10px auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+.nav ul li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.nav ul li a {
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: large;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #4d5d53;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 570px) {
+  .nav ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1px 0;
+  }
+
+  .nav ul li a {
+    font-size: xx-small;
+    align-self: center;
+  }
+}
+
+.sticky {
+  position:sticky;
+  top: 0;
+  z-index: +1;
+}
+
+/* Article card */
+.indexNewsCardHeader p {
+  text-align: center;
+  color: #9f2121;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.indexNewsCardParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+}
+
+.indexNewsCard {
+  display: flex;
+  background-color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 10px;
+  max-width: 310px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.indexNewsCard * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.indexNewsCard img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+  opacity: 0.75;
+}
+
+.indexNewsCard figcaption {
+  padding: 25px 20px 25px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.indexNewsCard .category {
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: 800;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 10px 0;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.indexNewsCard .category span {
+  display: block;
+  line-height: 14px;
+}
+
+.indexNewsCard .category .type {
+  font-size: 8px;
+}
+
+.indexNewsCard h3,
+.indexNewsCard p {
+  margin: 0;
+  padding: 0;
+}
+
+.indexNewsCard h3 {
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.indexNewsCard .newsCardHover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  background-color: rgba(77, 93, 83, 0.75);
+  display: flex;
+  font-size: 65px;
+  justify-content: center;
+  opacity: 0;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.indexNewsCard a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.indexNewsCard:hover .newsCardHover,
+.indexNewsCard.newsCardHover .newsCardHover {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  opacity: 1;
+}
+
+.indexNewsCard:hover figcaption,
+.indexNewsCard.newsCardHover figcaption {
+  opacity: 0;
+}
+
+.indexNewsCard:hover .category,
+.indexNewsCard.newsCardHover .category {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #4d5d53;
+}
+
+.footer .header {
+  max-width: 1010px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid rgba(77, 93, 83, 0.829);
+  ;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 375px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer .header {
+    font-size: 12px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}

@@ -1,0 +1,83 @@
+body {
+  background-color: #EAEAEA;
+}
+
+header {
+  font-weight: bold;
+  position: relative;
+}
+
+/* Scroll to top button */
+#scrollToTheTop {
+  display: unset;
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  z-index: 99;
+  font-size: 12px;
+  border:none;
+  outline:none;
+  background-color: #4d5d53;
+  color:#ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollToTheTop:hover {
+  color:#000000;
+}
+
+/* Main font of the whole website */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* Name of my magazine */
+.maintitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d5d53;
+  height: fit-content;
+}
+
+.maintitle a:link {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:visited {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:hover {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+/* Report content */
+h2 {
+  color: #4d5d53;
+  text-align: center;
+}
+
+h3 {
+  color: #4d5d53;
+}
+
+.content {
+  align-items: center;
+  width: 900px;
+  padding: 30px;
+  border: 2px outset #4d5d53;
+}
+
+.sitemap {
+  width: 80%;
+}
+
+.wireframe {
+  width: 50%;
+}

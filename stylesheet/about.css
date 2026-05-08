@@ -1,0 +1,367 @@
+body {
+  background-color: #EAEAEA;
+}
+
+header {
+  font-weight: bold;
+  position: relative;
+}
+
+/* Scroll to top button */
+#scrollToTheTop {
+  display: unset;
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  z-index: 99;
+  font-size: 12px;
+  border:none;
+  outline:none;
+  background-color: #4d5d53;
+  color:#ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollToTheTop:hover {
+  color:#000000;
+}
+
+/* Main font of the whole website */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* Name of my magazine */
+.maintitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d5d53;
+  height: fit-content;
+}
+
+.maintitle a:link {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:visited {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:hover {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+/* Real-time date */
+#todaysdate {
+  color: #4d5d53;
+  font-family: 'DM Serif Display', serif;
+  font-size: small;
+  text-align: right;
+  height: fit-content;
+}
+
+/* @media allows application of different styles for different media types/devices */
+/* When screen size width becomes smaller than 300px, the style below will be applied */
+/* Same goes for the rest of the @media in the css, with respective to their screen size stated */
+@media screen and (max-width: 300px) {
+  .maintitle {
+    display: flex;
+    font-size: 20px;
+  }
+}
+
+/* Navigation bar */
+.nav {
+  position: relative;
+  background-color: #EAEAEA;
+  display: flex;
+}
+
+.nav ul {
+  margin: 10px auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+.nav ul li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.nav ul li a {
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: large;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #4d5d53;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 570px) {
+  .nav ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1px 0;
+  }
+
+  .nav ul li a {
+    font-size: xx-small;
+    align-self: center;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: +1;
+}
+
+/* Parallax */
+/* Referenced from https://codepen.io/designbyremedy/pen/RwGwvy */
+#aboutParallax .title {
+  background: #EAEAEA;
+  padding: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#aboutParallax .title h1 {
+  font-size: 35px;
+  letter-spacing: 8px;
+  font-family: 'DM Serif Display', serif;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d5d53;
+  height: fit-content;
+}
+
+/* Margin */
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Section - Block */
+#aboutParallax .block {
+  background: white;
+  padding: 60px;
+  width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#aboutParallax .block-gray {
+  background: #f2f2f2;
+  padding: 60px;
+}
+
+#aboutParallax .section-overlay-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.70;
+}
+
+/* Sections of Parallax */
+/* First section */
+#aboutParallax .firstP {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url(../images/about/about1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* Second section */
+#aboutParallax .secondP {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url(../images/about/about2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#aboutParallax .line-break {
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#aboutParallax .map {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #aboutParallax .block {
+    padding: 40px;
+    width: 620px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #aboutParallax .title h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #aboutParallax .block {
+    padding: 30px;
+    width: 420px;
+  }
+
+  #aboutParallax h2 {
+    font-size: 30px;
+  }
+
+  #aboutParallax .block {
+    padding: 30px;
+  }
+
+  #aboutParallax .firstP,
+  #aboutParallax .secondP{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #aboutParallax .block {
+    padding: 30px 15px;
+    width: 290px;
+  }
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #4d5d53;
+}
+
+.footer .header {
+  max-width: 1010px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid rgba(77, 93, 83, 0.829);
+  ;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 375px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer .header {
+    font-size: 12px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}

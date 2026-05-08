@@ -1,0 +1,410 @@
+body {
+  background-color: #EAEAEA;
+}
+
+header {
+  font-weight: bold;
+  position: relative;
+}
+
+/* Scroll to top button */
+#scrollToTheTop {
+  display: unset;
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  z-index: 99;
+  font-size: 12px;
+  border:none;
+  outline:none;
+  background-color: #4d5d53;
+  color:#ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollToTheTop:hover {
+  color:#000000;
+}
+
+/* Main font of the whole website */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* Name of my magazine */
+.maintitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4d5d53;
+  height: fit-content;
+}
+
+.maintitle a:link {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:visited {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.maintitle a:hover {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+/* Real-time date */
+#todaysdate {
+  color: #4d5d53;
+  font-family: 'DM Serif Display', serif;
+  font-size: small;
+  text-align: right;
+  height: fit-content;
+}
+
+/* @media allows application of different styles for different media types/devices */
+/* When screen size width becomes smaller than 300px, the style below will be applied */
+/* Same goes for the rest of the @media in the css, with respective to their screen size stated */
+@media screen and (max-width: 300px) {
+  .maintitle {
+    display: flex;
+    font-size: 20px;
+  }
+}
+
+/* Navigation bar */
+.nav {
+  position: relative;
+  background-color: #EAEAEA;
+  display: flex;
+}
+
+.nav ul {
+  margin: 10px auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+.nav ul li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.nav ul li a {
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: large;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #4d5d53;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 570px) {
+  .nav ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1px 0;
+  }
+
+  .nav ul li a {
+    font-size: xx-small;
+    align-self: center;
+  }
+}
+
+.sticky {
+  position:sticky;
+  top: 0;
+  z-index: +1;
+}
+
+/* Article content */
+.newsContent {
+  font-family: 'DM Serif Display', serif;
+  display: flex;
+}
+
+/* Left column of article content */
+.left {
+  display: inline-block;
+  background-color:#EAEAEA;
+  height: 100%;
+  width: 900px;
+  padding: 20px;
+}
+
+.left h1 {
+  display: flex;
+  color:#000000;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.left h2 {
+  color:#000000;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.left h3 {
+  color: #4d5d53;
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.left h4 {
+  color: #000000;
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.left h5 {
+  color: #4d5d53;
+  display: flex;
+  font-size: 19px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.left h6 {
+  color: #4d5d53;
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.left a {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.left a:link {
+  color: #4d5d53;
+  text-decoration: none;
+}
+
+.left a:hover {
+  border-bottom: 1px solid rgba(77, 93, 83, 0.829);
+}
+
+.left p {
+  color:#000000;
+  font-size: 15px;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.left p i {
+  font-size: 13px;
+}
+
+.left .image {
+  display: flex;
+  justify-content: center;
+}
+
+.left img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Make the first letter of the paragraph a different style */
+.firstletter::first-letter {
+  font-size: 30px;
+  color: #9f5c21;
+  font-weight: bold;
+}
+
+/* Right column of article content */
+.right {
+  height: 100%;
+  width: 300px;
+  padding: 20px;
+}
+
+.right h1 {
+  font-size: 26px;
+  display: flex;
+}
+
+.miniNewsCard {
+  margin: 1rem auto;
+  margin-bottom: 1.6%;
+  background: #EAEAEA;
+  line-height: 1.4;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.miniNewsCard .description {
+  padding: 1rem;
+  background: #EAEAEA;
+  position: relative;
+}
+
+.miniNewsCard .description h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.miniNewsCard .description h2 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color:#4d5d53;
+  margin-top: 5px;
+}
+
+.miniNewsCard p {
+  font-size: 0.7rem;
+  position: relative;
+  margin: 1rem 0 0;
+}
+
+.miniNewsCard a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.miniNewsCard a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (max-width: 570px) {
+  .miniNewsCard {
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+  }
+  .miniNewsCard .description {
+    flex-basis: 60%;
+  }
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #4d5d53;
+}
+
+.footer .header {
+  max-width: 1010px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-family: 'DM Serif Display', serif;
+  color: #4d5d53;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: rgba(77, 93, 83, 0.829);
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid rgba(77, 93, 83, 0.829);
+  ;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 375px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer .header {
+    font-size: 12px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
