@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SLIFETIMESY - Travel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Scroll to the top button -->
+    <!-- Referenced from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+    <button onclick="scrollToTopFunction()" id="scrollToTheTop" title="Go to top">
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+        Back To The Top
+    </button>
+
+    <!-- Name of my magazine & the real-time date -->
+    <header>
+        <h1 class="maintitle"><a href="../index.html">SLIFETIMESY</a></h1>
+        <!-- Referenced from https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/ -->
+        <h4 id="todaysdate"></h4>
+    </header>
+
+    <!-- Navigation bar -->
+    <div class="nav" id="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../foodIndex.html">Dining</a></li>
+            <li><a href="../travelIndex.html">Travel</a></li>
+            <li><a href="../wellnessIndex.html">Wellness</a></li>
+            <li><a href="../entertainmentIndex.html">Entertainment</a></li>
+            <li><a href="../womenIndex.html">Women</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Article card referenced from https://codepen.io/littlesnippets/pen/vKpvGP -->
+    <!-- Article card header -->
+    <div class="indexNewsCardHeader">
+        <p>Travel</p>
+        <hr>
+    </div>
+
+    <!-- Article card -->
+    <div class="indexNewsCardParent">
+        <figure class="indexNewsCard">
+            <img src="images/travel/travel1.jpg" alt="Fancy hotel lobby" />
+            <div class="category">
+                <span class="type">TRAVEL</span>
+            </div>
+            <figcaption>
+                <h3>4 romantic hotels in Europe for couples on a Valentine's Day getaway</h3>
+                <p>Get ready to fall in love all over again.</p>
+            </figcaption>
+            <div class="newsCardHover">
+                Click To Read More
+            </div>
+            <a href="../travel/europe.html"></a>
+        </figure>
+
+        <figure class="indexNewsCard">
+            <img src="images/travel/travel2.jpg" alt="Korean woman smiling" />
+            <div class="category">
+                <span class="type">TRAVEL</span>
+            </div>
+            <figcaption>
+                <h3>A guide to Seoul’s best hidden restaurants and bars</h3>
+                <p>Not far from the glare of the city center, the South Korean capital offers a wealth of cosy, cool hangouts, 
+                    if you don’t mind ducking down alleys and opening a well-concealed door or two.</p>
+            </figcaption>
+            <div class="newsCardHover">
+                Click To Read More
+            </div>
+            <a href="../travel/seoul.html"></a>
+        </figure>
+    </div>
+
+    <!-- Footer -->
+    <hr>
+    <div class="footer">
+        <div class="header">
+            <h2>SLIFETIMESY<sup>&copy;</sup></h2>
+        </div>
+        <div class="content">
+            <div class="links">
+                <h4>Quick links</h4>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/about.html">About</a></p>
+            </div>
+            <div class="social-media">
+                <h4>Social Media</h4>
+                <p>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official icon" aria-hidden="true"></i>
+                        Facebook</a>
+                </p>
+                <p>
+                    <a href="https://www.twitter.com/"><i class="fa fa-twitter icon" aria-hidden="true"></i>
+                        Twitter</a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram icon" aria-hidden="true"></i>
+                        Instagram</a>
+                </p>
+            </div>
+        </div>
+        <footer>
+            <hr />
+            &copy; 2023 Copyright SLIFETIMESY
+        </footer>
+    </div>
+
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
